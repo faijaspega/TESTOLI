@@ -1,0 +1,156 @@
+PL/SQL Developer Report
+
+[SQL]
+select p.* from user_tab_privs_recd p
+where p.grantor like &<name="Usuario"
+                       hint="Usuario (se permite la utilización de caracteres comodín)"
+                       type="string"
+                       default="%"
+                       ifempty="%"
+                       list="select username from all_users order by username">
+order by p.grantor, p.table_name, p.privilege
+
+[Options]
+Connect=False
+Username=
+Password=2869
+Database=
+ConnectAs=
+LockMode=0
+LockedPassword=2656
+BkgColor=-2147483643
+BkgImage=
+FormLayout=False
+OnlyNBSP=False
+LeftMargin=0
+TopMargin=0
+PageBreak=0
+AddSQL=False
+
+[Styles]
+
+{Title}
+Enabled=True
+Name=Report Title
+Description=Usuario - Privilegios sobre objetos recibidos
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{Param}
+Enabled=True
+Name=Variables
+Description=
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{Table}
+Enabled=False
+Name=Tabular Tables
+Description=
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{Form}
+Enabled=False
+Name=Form Tables
+Description=
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{Field}
+Enabled=False
+Name=Default Field
+Description=
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=OWNER
+Description=Propietario
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=TABLE_NAME
+Description=Tabla
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=GRANTOR
+Description=Autorizado por
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=PRIVILEGE
+Description=Privilegio
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=GRANTABLE
+Description=Autorizable
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=HIERARCHY
+Description=Jerarquia
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+
+
+[CSS]
+

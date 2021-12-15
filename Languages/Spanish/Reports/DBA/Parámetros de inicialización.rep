@@ -1,0 +1,205 @@
+PL/SQL Developer Report
+
+[SQL]
+select * from v$parameter
+where upper(name) like &<name="Nombre"
+                         type="string"
+                         default="%"
+                         ifempty="%"
+                         uppercase="yes"
+                         hint="Nombre del/los parámetros de inicialización">
+and upper(description) like &<name="Descripción"
+                              type="string"
+                              default="%"
+                              ifempty="%"
+                              uppercase="yes"
+                              hint="Descripción del/los parámetros de inicialización">
+
+[Options]
+Connect=False
+Username=
+Password=2997
+Database=
+ConnectAs=
+LockMode=0
+LockedPassword=2183
+BkgColor=-2147483643
+BkgImage=
+FormLayout=False
+OnlyNBSP=False
+LeftMargin=0
+TopMargin=0
+PageBreak=0
+AddSQL=False
+
+[Styles]
+
+{Title}
+Enabled=True
+Name=Report Title
+Description=DBA - Parámetros de inicialización
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{Param}
+Enabled=True
+Name=Variables
+Description=
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{Table}
+Enabled=False
+Name=Tabular Tables
+Description=
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{Form}
+Enabled=False
+Name=Form Tables
+Description=
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{Field}
+Enabled=False
+Name=Default Field
+Description=
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=NUM
+Description=Núm
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=NAME
+Description=Nombre
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=TYPE
+Description=Tipo
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=VALUE
+Description=Valor
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=ISDEFAULT
+Description=¿Por defecto?
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=ISSES_MODIFIABLE
+Description=Modif. Sesión
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=ISSYS_MODIFIABLE
+Description=Modif. Sistema
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=ISMODIFIED
+Description=Modificable
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=ISADJUSTED
+Description=Ajustable
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=DESCRIPTION
+Description=Descripción
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+
+
+[CSS]
+

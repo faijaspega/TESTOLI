@@ -1,0 +1,13 @@
+For older Plug-Ins without specific images for menu buttons (showing the small blue cog), image files can be placed in thes directory.
+
+The naming convention is [name of tab].[name of button].png (or bmp)
+Without the dots in tab name or menu name.
+
+for example, for a Plug-In with a tab name of "Demo Plug-In" with a menu name "Menu 1..." the filename should be:
+
+Demo Plug-In.Menu 1.png
+
+or
+
+Demo Plug-In.Menu 1.bmp
+

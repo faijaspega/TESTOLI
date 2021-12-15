@@ -1,0 +1,3 @@
+prompt Importing table %TABLENAME%...
+set feedback off
+set define off

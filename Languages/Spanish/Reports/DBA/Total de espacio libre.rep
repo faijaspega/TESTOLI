@@ -1,0 +1,109 @@
+PL/SQL Developer Report
+
+[SQL]
+select s.tablespace_name "Nombre", 
+       to_char(sum(s.bytes), 'fm999g999g999g999g990') "Espacio Libre"
+from dba_free_space s
+group by s.tablespace_name
+order by s.tablespace_name
+
+[Options]
+Connect=False
+Username=
+Password=2677
+Database=
+ConnectAs=
+LockMode=0
+LockedPassword=2507
+BkgColor=-2147483643
+BkgImage=
+FormLayout=False
+OnlyNBSP=False
+LeftMargin=0
+TopMargin=0
+PageBreak=0
+AddSQL=False
+
+[Styles]
+
+{Title}
+Enabled=True
+Name=Report Title
+Description=DBA - Total de espacio libre
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{Param}
+Enabled=True
+Name=Variables
+Description=
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{Table}
+Enabled=False
+Name=Tabular Tables
+Description=
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{Form}
+Enabled=False
+Name=Form Tables
+Description=
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{Field}
+Enabled=False
+Name=Default Field
+Description=
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=Nombre
+Description=
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=Espacio Libre
+Description=
+Style=
+HeaderStyle=
+Align=4
+Break=0
+Function=0
+Format=
+
+
+
+[CSS]
+

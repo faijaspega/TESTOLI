@@ -1,0 +1,90 @@
+PL/SQL Developer Report
+
+[SQL]
+select o.* from all_objects o
+where o.object_type like &<name="Objekttyp"
+                           hint="Der Typ des Objekts"
+                           type="string"
+                           default="Alle"
+                           ifempty="Alle"
+                           list="%, Alle, PROCEDURE, Prozeduren, FUNCTION, Funktionen, PACKAGE%, Pakete, TYPE%, Typen, TRIGGER, Trigger, TABLE, Tabellen, INDEX, Indizes, SEQUENCE, Sequenzen, SYNONYM, Synonyme"
+                           description="yes">
+and o.owner like &<name="Objektschema"
+                   hint="Das Schema des Objekts (Platzhalter erlaubt)"
+                   type="string"
+                   default="select user from dual"
+                   ifempty="%"
+                   list="select username from all_users order by username">
+and o.object_name like &<name="Objektname"
+                         hint="Der Name des Objekts (Platzhalter erlaubt)"
+                         type="string"
+                         default="%"
+                         ifempty="%"
+                         list="select object_name from all_objects where object_type like :Objekttyp and owner like :Objektschema order by object_name">
+order by o.object_type, o.owner, o.object_name
+
+[Options]
+Connect=False
+Username=
+Password=2142
+Database=
+ConnectAs=
+LockMode=0
+LockedPassword=2612
+BkgColor=-2147483643
+BkgImage=
+FormLayout=False
+LeftMargin=0
+TopMargin=0
+
+[Styles]
+
+{Title}
+Enabled=True
+Name=Report Title
+Description=Alle Objekte
+Style=
+HeaderStyle=
+Align=0
+Break=0
+
+{Param}
+Enabled=True
+Name=Variables
+Description=
+Style=
+HeaderStyle=
+Align=0
+Break=0
+
+{Table}
+Enabled=False
+Name=Tabular Tables
+Description=
+Style=
+HeaderStyle=
+Align=0
+Break=0
+
+{Form}
+Enabled=False
+Name=Form Tables
+Description=
+Style=
+HeaderStyle=
+Align=0
+Break=0
+
+{Field}
+Enabled=False
+Name=Default Field
+Description=
+Style=
+HeaderStyle=
+Align=0
+Break=0
+
+
+
+[CSS]
+

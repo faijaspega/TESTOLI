@@ -1,0 +1,162 @@
+PL/SQL Developer Report
+
+[SQL]
+select s.* from all_synonyms s
+where s.owner like &<name="Propietario"
+                     hint="Propietario del sinónimo (se permite el uso de comodines)"
+                     type="string"
+                     default="select user from dual"
+                     ifempty="%"
+                     list="select username from all_users union all select 'PUBLIC' from dual order by 1">
+and s.synonym_name like &<name="Nombre"
+                          hint="Nombre del sinónimo (se permite la utilización de caracteres comodín)"
+                          type="string"
+                          default="%"
+                          ifempty="%"
+                          list="select synonym_name from all_synonyms where owner like :propietario order by synonym_name">
+and s.table_owner like &<name="Propietario del objeto referenciado:"
+                         hint="Propietario del objeto al cual el sinónimo hace referencia (se permite la utilización de caracteres comodín)"
+                         type="string"
+                         default="%"
+                         ifempty="%"
+                         list="select username from all_users order by username">
+and s.table_name like &<name="Nombre del objeto referenciado:"
+                        hint="Nombre del objeto al cual el sinónimo hace referencia (se permite el uso de comodines)"
+                        type="string"
+                        default="%"
+                        ifempty="%">
+order by s.owner, s.synonym_name
+
+[Options]
+Connect=False
+Username=
+Password=2810
+Database=
+ConnectAs=
+LockMode=0
+LockedPassword=2377
+BkgColor=-2147483643
+BkgImage=
+FormLayout=False
+OnlyNBSP=False
+LeftMargin=0
+TopMargin=0
+PageBreak=0
+AddSQL=False
+
+[Styles]
+
+{Title}
+Enabled=True
+Name=Report Title
+Description=Objetos - Sinónimos
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{Param}
+Enabled=True
+Name=Variables
+Description=
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{Table}
+Enabled=False
+Name=Tabular Tables
+Description=
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{Form}
+Enabled=False
+Name=Form Tables
+Description=
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{Field}
+Enabled=False
+Name=Default Field
+Description=
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=OWNER
+Description=Propietario
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=SYNONYM_NAME
+Description=Sinónimo
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=TABLE_OWNER
+Description=Propietario de la tabla
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=TABLE_NAME
+Description=Nombre de la tabla
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=DB_LINK
+Description=Vínculo
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+
+
+[CSS]
+

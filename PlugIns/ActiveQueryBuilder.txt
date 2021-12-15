@@ -1,0 +1,7 @@
+ActiveQueryBuilder
+------------------
+
+Replacement query builder for PL/SQL Developer.
+
+Based on Active Query Builder (http://www.activequerybuilder.com/)
+

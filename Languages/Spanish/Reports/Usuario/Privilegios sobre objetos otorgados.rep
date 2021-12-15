@@ -1,0 +1,167 @@
+PL/SQL Developer Report
+
+[SQL]
+select p.* from user_tab_privs_made p
+where p.grantee like &<name="Autorizado"
+                       hint="Usuario o rol autorizado (se permite la utilización de caracteres comodín)"
+                       type="string"
+                       default="%"
+                       ifempty="%"
+                       list="select granted_role from user_role_privs 
+                             union all 
+                             select username from all_users
+                             union all
+                             select 'PUBLIC' from dual
+                             order by 1">
+and p.table_name like &<name="Objeto"
+                        hint="Objeto sobre el cual se han otorgado permisos (se permite la utilización de caracteres comodín)"
+                        type="string"
+                        default="%"
+                        ifempty="%"
+                        list="select object_name from user_objects order by object_name">
+order by p.grantee, p.table_name, p.privilege
+
+[Options]
+Connect=False
+Username=
+Password=2237
+Database=
+ConnectAs=
+LockMode=0
+LockedPassword=2233
+BkgColor=-2147483643
+BkgImage=
+FormLayout=False
+OnlyNBSP=False
+LeftMargin=0
+TopMargin=0
+PageBreak=0
+AddSQL=False
+
+[Styles]
+
+{Title}
+Enabled=True
+Name=Report Title
+Description=Usuario - Privilegios sobre objetos otorgados
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{Param}
+Enabled=True
+Name=Variables
+Description=
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{Table}
+Enabled=False
+Name=Tabular Tables
+Description=
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{Form}
+Enabled=False
+Name=Form Tables
+Description=
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{Field}
+Enabled=False
+Name=Default Field
+Description=
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=GRANTEE
+Description=Autorizado
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=TABLE_NAME
+Description=Tabla
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=GRANTOR
+Description=Autorizado por
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=PRIVILEGE
+Description=Privilegio
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=GRANTABLE
+Description=Autorizable
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=HIERARCHY
+Description=Jerarquia
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+
+
+[CSS]
+

@@ -1,0 +1,103 @@
+Enhancements in PL/SQL Developer 14.0.6
+=======================================
+* Querying a table with LOBs or Objects on Oracle21c would raise an error
+* Queries on Oracle21c could raise an "ORA-24444: TTC RPC (OALL) not allowed" exception
+* PL/SQL Beautifier could add empty lines after "OPEN cursor" statement
+* Opening the "Roles" folder in the Object Browser could display a popup message with the current username
+
+Enhancements in PL/SQL Developer 14.0.5
+=======================================
+* Import Tables would truncate NVARCHAR2 column values at 4000 bytes For databases with max_string_size = extended.
+* The Difference Viewer did not always display national characters correctly when comparing files
+* Macro playback can now be undone as one
+* Clicking on a Bookmark List item did not always work correctly
+* Windows Shutdown or Sign out would not stop PL/SQL Developer when selecting "don't save"
+* Windows Shutdown or Sign out would ask to save modified Workset files
+* The PL/SQL Beautifier did not format the bind variable list for an "OPEN cursor USING" statement
+* PL/SQL Developer will now ask for translation when first run, depending on the Windows language
+
+Enhancements in PL/SQL Developer 14.0.4
+=======================================
+* Fixed an editor memory leak
+* File > Save All did not work for unchanged database sources
+* A floating Bookmark List could be empty after startup
+* The Difference Viewer popup menu had incorrect menu items
+* Selection > Uppercase / Lowercase did not interpret quotes in comments correctly
+* The Editor Find function did not always scroll the search result into view
+* The custom toolbar button for the Workset Apply function would be too large
+* Ribbon group images could be blank if the main window was too small
+
+Enhancements in PL/SQL Developer 14.0.3
+=======================================
+* The "Test" function on Oracle 18 and later now correctly declares %ROWTYPE parameters
+* A startup delay could occur when the default printer was not accessible
+* Report results could not be copied with Ctrl-C
+* The User Defined Tools "Execute" and "Help" button did not work
+* The Find dialog could incorrectly copy text selected in the editor
+* Editor search hits were not always immediately visible when too far to the right
+* Load Desktop, Crash Recovery and Load Workset will not retry failed connections
+* PL/SQL Beautifier will now align exception declarations with variable declarations
+* Column aliases in View DDL did not use quotes for mixed case column names
+* File Browser and window version control status were not updated after File > Save As
+* Template popup menu could be empty (after long time or hibernate)
+* Reopening a Workset immediately after closing it did not show the last changes
+* The Git status of files in subdirectories were not always up-to-date in the File Browser
+
+Enhancements in PL/SQL Developer 14.0.2
+=======================================
+* A "Show docking animation" preference has been added
+* Find & Replace no longer overrides previously entered search text when selecting text in the editor
+* The Test Window SQL Output grid did not clear the sort indicators when executing a new query
+* When viewing a column value with an external tool, no error was displayed if the tool fails
+* The Difference Viewer will now open at the same line as the current editor if applicable
+* An existing Difference Viewer Window will now be updated when comparing the same file or object
+* The Register form fields could be blocked
+* The Find form buttons are now disabled if no other window is active
+* Some controls could be incorrectly scaled when the Monitor scaling was changed
+* The Unicode header (UTF8 BOM) for export files could be incorrect for some system locales
+* When describing a table with a long multi-line comment, the column list could be invisible
+* The Copy function of the Debugger call stack only copied the selected stack item
+* Fixed an issue with Crash Recovery that would show all details as "?"
+* You can now perform an incremental search in Object Grids by typing the object name
+* The PL/SQL Beautifier did not uppercase keywords with a minus (e.g. -SUM)
+* Closed Template windows could re-appear when Windows wakes up
+* Fixed some memory/resource leaks
+* Updates and News could have a dark blue background on the first item in the 64 bit version
+* A "to_date without format" hint could occur when disabled in the preferences
+* When searching for plain text with the regular expression option enabled, spaces are now accepted without a \ escape character
+* The Command Window will now stop execution of a script if "whenever sqlerror exit" is used and a connect fails
+* The Command Window connect command could not directly connect with an externally identified user
+* Assigning a schedule to a job could fail with "ORA-01847: day of month must be between 1 and last day of month"
+* Code Assistant context description did not work for lowercase partial object names with international characters
+* The AfterConnect.sql script would not always be executed in Dual Session mode
+* The performance of the "Window: Next Used Window" function key has been improved
+* The "Test" function on Oracle 18 and later would declare PL/SQL Table parameters as "table" instead of the actual data type
+
+Enhancements in PL/SQL Developer 14.0.1
+=======================================
+* Language packs updated for 14.0 features
+* Large Data Editor did not show in Single Record View in the SQL Window
+* Selection > Uncomment would remove /* and */ in string constants
+* Window List did not conform to the "Short Text" setting for Difference Viewer windows
+* The Difference Viewer window did not always have a correct title
+* Cut and Paste did not work in the SQL Window in Single Record View
+* Code Assistant would display urowid parameters as "Unknown type 104"
+* Table Definition Editor Index Column Selector would convert string expressions to lowercase
+* Entering a value with square brackets when executing a template would interpret the square brackets as a variable
+* Key Configuration items for File / New / Program Window were missing
+* The Command Window BEAUTIFY <file> command did not conform to the Files / Format / Linebreaks preference
+* The Project desktop file (project.dsk) is now portable
+* Using the "SQL Window: Hide Editor" function would incorrectly reposition the vertical splitter
+* The Debugger did not always show correct variable values in local subprograms
+* Object Browser Filter "My invalid objects" would raise ORA-00918 when opening the Triggers folder
+* Clicking on Window List items did not always work correctly after changing the display
+* File Locations import/export functions added
+* File Browser directory popup items added for Git Clone and Subversion Checkout
+* Change All Lines popup menu item added to the Diagram Window
+* Fixes for multiple monitors with different display scaling (file selector, print dialogs, MDI window title bars, scrollbar width) were not available in the 64 bit version
+* The "Close unused connections" preference could cause delays when closing a window or when changing the main connection
+* The Quick Access Toolbar in Full Screen mode on Windows 10 was transparent
+
+Enhancements in PL/SQL Developer 14.0
+=====================================
+Please see https://www.allroundautomations.com/products/pl-sql-developer/features/new-features-pl-sql-14-0/

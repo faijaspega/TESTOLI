@@ -1,0 +1,145 @@
+PL/SQL Developer Report
+
+[SQL]
+select p.* from dba_role_privs p
+where p.grantee like &<name="Usuario/Rol"
+                       hint="Usuario o rol autorizado(se permite la utilización de caracteres comodín)"
+                       type="string"
+                       default="%"
+                       ifempty="%"
+                       list="select role from dba_roles 
+                             union all 
+                             select username from dba_users 
+                             union all
+                             select 'PUBLIC' from dual
+                             order by 1">
+and p.granted_role like &<name="Rol autorizado"
+                          hint="Rol autorizado(se permite la utilización de caracteres comodín)"
+                          type="string"
+                          default="%"
+                          ifempty="%"
+                          list="select role from dba_roles order by role">
+order by p.grantee, p.granted_role
+
+[Options]
+Connect=False
+Username=
+Password=2038
+Database=
+ConnectAs=
+LockMode=0
+LockedPassword=2685
+BkgColor=-2147483643
+BkgImage=
+FormLayout=False
+OnlyNBSP=False
+LeftMargin=0
+TopMargin=0
+PageBreak=0
+AddSQL=False
+
+[Styles]
+
+{Title}
+Enabled=True
+Name=Report Title
+Description=DBA - Privilegios sobre roles
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{Param}
+Enabled=True
+Name=Variables
+Description=
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{Table}
+Enabled=False
+Name=Tabular Tables
+Description=
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{Form}
+Enabled=False
+Name=Form Tables
+Description=
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{Field}
+Enabled=False
+Name=Default Field
+Description=
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=GRANTEE
+Description=Usuario / Rol
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=GRANTED_ROLE
+Description=Rol
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=ADMIN_OPTION
+Description=Opción de administración
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=DEFAULT_ROLE
+Description=Rol por defecto
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+
+
+[CSS]
+

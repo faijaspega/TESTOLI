@@ -1,0 +1,195 @@
+PL/SQL Developer Report
+
+[SQL]
+select s.* from all_sequences s
+where s.sequence_owner like &<name="Propietario"
+                       hint="Propietario de la secuencia (se permite la utilización de caracteres comodín)"
+                       type="string"
+                       default="select user from dual"
+                       ifempty="%"
+                       list="select username from all_users order by username">
+and s.sequence_name like &<name="Nombre"
+                           hint="Nombre de la secuencia (se permite la utilización de caracteres comodín)"
+                           type="string"
+                           default="%"
+                           ifempty="%"
+                           list="select sequence_name from all_sequences where sequence_owner like :propietario order by sequence_name">
+order by s.sequence_owner, s.sequence_name
+
+[Options]
+Connect=False
+Username=
+Password=2580
+Database=
+ConnectAs=
+LockMode=0
+LockedPassword=2754
+BkgColor=-2147483643
+BkgImage=
+FormLayout=False
+OnlyNBSP=False
+LeftMargin=0
+TopMargin=0
+PageBreak=0
+AddSQL=False
+
+[Styles]
+
+{Title}
+Enabled=True
+Name=Report Title
+Description=Objetos - Secuencias
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{Param}
+Enabled=True
+Name=Variables
+Description=
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{Table}
+Enabled=False
+Name=Tabular Tables
+Description=
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{Form}
+Enabled=False
+Name=Form Tables
+Description=
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{Field}
+Enabled=False
+Name=Default Field
+Description=
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=SEQUENCE_OWNER
+Description=Propietario
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=SEQUENCE_NAME
+Description=Nombre
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=MIN_VALUE
+Description=Valor Min.
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=MAX_VALUE
+Description=Valor Max.
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=INCREMENT_BY
+Description=Incrementado por
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=CYCLE_FLAG
+Description=Cíclico
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=ORDER_FLAG
+Description=Orden
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=CACHE_SIZE
+Description=Tamaño de la caché
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=LAST_NUMBER
+Description=Ultimo valor
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+
+
+[CSS]
+

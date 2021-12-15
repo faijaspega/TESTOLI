@@ -1,0 +1,94 @@
+PL/SQL Developer Report
+
+[SQL]
+select s.* from all_synonyms s
+where s.owner like &<name="Synonymschema"
+                     hint="Das Schema des Synonyms (Platzhalter erlaubt)"
+                     type="string"
+                     default="select user from dual"
+                     ifempty="%"
+                     list="select username from all_users union all select 'PUBLIC' from dual order by 1">
+and s.synonym_name like &<name="Synonymname"
+                          hint="Der Name des  Synonyms (Platzhalter erlaubt)"
+                          type="string"
+                          default="%"
+                          ifempty="%"
+                          list="select synonym_name from all_synonyms where owner like :synonymschema order by synonym_name">
+and s.table_owner like &<name="Referenziertes Objektschema"
+                         hint="Das Schema der Objekte auf das Synonym verweist (Platzhalter erlaubt)"
+                         type="string"
+                         default="%"
+                         ifempty="%"
+                         list="select username from all_users order by username">
+and s.table_name like &<name="Referenzierter Objektname"
+                        hint="Der Name des Objekts auf das das Synonym verweist (Platzhalter erlaubt)"
+                        type="string"
+                        default="%"
+                        ifempty="%">
+order by s.owner, s.synonym_name
+
+[Options]
+Connect=False
+Username=
+Password=2377
+Database=
+ConnectAs=
+LockMode=0
+LockedPassword=2015
+BkgColor=-2147483643
+BkgImage=
+FormLayout=False
+LeftMargin=0
+TopMargin=0
+
+[Styles]
+
+{Title}
+Enabled=True
+Name=Report Title
+Description=Synonyme
+Style=
+HeaderStyle=
+Align=0
+Break=0
+
+{Param}
+Enabled=True
+Name=Variables
+Description=
+Style=
+HeaderStyle=
+Align=0
+Break=0
+
+{Table}
+Enabled=False
+Name=Tabular Tables
+Description=
+Style=
+HeaderStyle=
+Align=0
+Break=0
+
+{Form}
+Enabled=False
+Name=Form Tables
+Description=
+Style=
+HeaderStyle=
+Align=0
+Break=0
+
+{Field}
+Enabled=False
+Name=Default Field
+Description=
+Style=
+HeaderStyle=
+Align=0
+Break=0
+
+
+
+[CSS]
+

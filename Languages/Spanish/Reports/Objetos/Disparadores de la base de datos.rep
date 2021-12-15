@@ -1,0 +1,262 @@
+PL/SQL Developer Report
+
+[SQL]
+select t.* from all_triggers t
+where t.owner like &<name="Propietario"
+                     hint="Propietario del disparador(trigger)(se permite la utilización de caracteres comodín)"
+                     type="string"
+                     default="select user from dual"
+                     ifempty="%"
+                     list="select username from all_users order by username">
+and t.trigger_name like &<name="Nombre"
+                          hint="Nombre del disparador(trigger)(se permite la utilización de caracteres comodín)"
+                          type="string"
+                          default="%"
+                          ifempty="%"
+                          list="select trigger_name from all_triggers where owner like :Propietario order by trigger_name">
+and t.table_owner like &<name="Propietario de la tabla"
+                         hint="Propietario de la tabla (se permite la utilización de caracteres comodín)"
+                         type="string"
+                         default="select user from dual"
+                         ifempty="%"
+                         list="select username from all_users order by username">
+and t.table_name like &<name="Nombre de la tabla"
+                        hint="Nombre de la tabla (se permite la utilización de caracteres comodín)"
+                        type="string"
+                        default="%"
+                        ifempty="%"
+                        list="select table_name from all_tables where owner like :Propietario_de_la_tabla order by table_name">
+order by t.owner, t.trigger_name
+
+[Options]
+Connect=False
+Username=
+Password=2013
+Database=
+ConnectAs=
+LockMode=0
+LockedPassword=2912
+BkgColor=-2147483643
+BkgImage=
+FormLayout=False
+OnlyNBSP=False
+LeftMargin=0
+TopMargin=0
+PageBreak=0
+AddSQL=False
+
+[Styles]
+
+{Title}
+Enabled=True
+Name=Report Title
+Description=Objetos - Disparadores de la base de datos (Triggers)
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{Param}
+Enabled=True
+Name=Variables
+Description=
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{Table}
+Enabled=False
+Name=Tabular Tables
+Description=
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{Form}
+Enabled=False
+Name=Form Tables
+Description=
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{Field}
+Enabled=False
+Name=Default Field
+Description=
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=OWNER
+Description=Propietario
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=TRIGGER_NAME
+Description=Nombre del disparador
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=TRIGGER_TYPE
+Description=Tipo
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=TRIGGERING_EVENT
+Description=Evento
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=TABLE_OWNER
+Description=Propietario de la tabla
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=BASE_OBJECT_TYPE
+Description=Tipo de objeto
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=TABLE_NAME
+Description=Nombre de la tabla
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=COLUMN_NAME
+Description=Nombres de las columns
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=REFERENCING_NAMES
+Description=Nombres referenciados
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=WHEN_CLAUSE
+Description=CláusulaWhen
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=STATUS
+Description=Estado
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=DESCRIPTION
+Description=Descripción
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=ACTION_TYPE
+Description=Tipo de acción
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{*}
+Enabled=True
+Name=TRIGGER_BODY
+Description=Código del disparador
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+
+
+[CSS]
+
